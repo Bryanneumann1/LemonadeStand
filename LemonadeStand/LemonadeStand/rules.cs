@@ -20,9 +20,13 @@ namespace LemonadeStand
                 "You will have to manage your invintory\n" +
                 "Weather will have an effect on your daily sales\n"+
                 "Sales will increase for hot dry days and decrease on colder rainy days\n" +
-                "Set your price accordingly according to the weather\n" +
+                "Set your price accordingly to the weather\n" +
                 "So be sure to check the weather everyday\n" +
-                "At the end of 7 days you will see how much lemonade you have sold");
+                "At the end of 7 days you will see your total profit or loss\n" +
+                "You will start out with $10.00 to purchase your invintory\n" +
+                "");
+            weather outside = new weather();
+            outside.generateweather();
         }
     }
 }

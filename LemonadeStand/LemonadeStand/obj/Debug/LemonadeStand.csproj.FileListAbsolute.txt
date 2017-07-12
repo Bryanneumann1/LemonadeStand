@@ -4,3 +4,9 @@ c:\users\home\documents\visual studio 2017\Projects\LemonadeStand\LemonadeStand\
 c:\users\home\documents\visual studio 2017\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.csprojResolveAssemblyReference.cache
 c:\users\home\documents\visual studio 2017\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.exe
 c:\users\home\documents\visual studio 2017\Projects\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.pdb
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.pdb
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.exe
+C:\Users\Home\Desktop\Projects\LemonadeStand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.pdb
