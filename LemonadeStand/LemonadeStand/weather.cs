@@ -12,7 +12,7 @@ namespace LemonadeStand
         {
 
         }
-        public int generateweather()
+        public int generateWeather()
         {
             Random weather = new Random();
             int number = weather.Next(0, 3);
@@ -26,13 +26,22 @@ namespace LemonadeStand
             }
             else if (number is 2)
             {
-                Console.WriteLine("Looks like its cloudy out today, Should be a decient day to sell lemonade");
+                Console.WriteLine("Looks like its cloudy out today, Should be a decent day to sell lemonade");
             }
             else if (number is 3)
             {
-                Console.WriteLine("Looks like its windy today, good luck selling on such a windy day");
+                Console.WriteLine("Looks like its windy today, good luck selling lemonade on such a windy day");
             }
+            generateTemp();
             return number;
+            
+        }
+        public int generateTemp()
+        {
+            Random tempature = new Random();
+            int temp = tempature.Next(70, 99);
+            Console.WriteLine("The current tempature for today is "+temp+" degrees");
+            return temp;
         }
     }
 }

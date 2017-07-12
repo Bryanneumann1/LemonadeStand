@@ -24,9 +24,12 @@ namespace LemonadeStand
                 "So be sure to check the weather everyday\n" +
                 "At the end of 7 days you will see your total profit or loss\n" +
                 "You will start out with $10.00 to purchase your invintory\n" +
-                "");
+                "\n" +
+                "Press enter to start the game\n");
             weather outside = new weather();
-            outside.generateweather();
+            Console.ReadKey();
+            outside.generateWeather();
+          
         }
     }
 }
