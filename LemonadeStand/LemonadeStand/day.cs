@@ -8,5 +8,13 @@ namespace LemonadeStand
 {
     class day
     {
+        public day()
+        {
+
+        }
+        public void daytime()
+        {
+
+        }
     }
 }
