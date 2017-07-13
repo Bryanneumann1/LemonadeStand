@@ -12,8 +12,8 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Console.WriteLine("Your Lemonade Stand");
-            game start = new game();
-            start.playgame();
+            Game start = new Game();
+            start.Playgame();
                 
             Console.ReadKey();
         }

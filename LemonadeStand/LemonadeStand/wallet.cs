@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class wallet
+    public class Wallet
     {
         public double money;
 
-        public wallet()
+        public Wallet()
         {
             money = 20.00;
         }

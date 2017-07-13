@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class weather
+    class Weather
     {
-        public weather()
+        public Weather()
         {
 
         }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class rules
+    class Rules
     {
 
-        public rules()
+        public Rules()
         {
 
         }

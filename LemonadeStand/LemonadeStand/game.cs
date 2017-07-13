@@ -6,26 +6,22 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class game
+    class Game
     {
-        rules Start = new rules();
-        weather outside = new weather();
-        store purchase = new store();
-        store buy = new store();
+        Rules Start = new Rules();
+        Weather outside = new Weather();
+        Store purchase = new Store();
+        Store buy = new Store();
 
-        public game()
-        {
-           
-           
-        }
-        public void playgame()
+        
+        public void Playgame()
         {
             Start.DisplayRules();
             Console.ReadKey();
             outside.generateWeather();
             Console.ReadKey();
             purchase.displayinventoryrules();
-            buy.purchaseinventory();
+            buy.Purchaseinventory();
             
 
         }

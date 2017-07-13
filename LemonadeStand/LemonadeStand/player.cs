@@ -6,19 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class player
+    public class Player
     {
+        public Wallet wallet = new Wallet();
+        public Inventory inventory = new Inventory();
+        public Recipe recipe = new Recipe();
         
-
-
-        public player()
-        {
-            
-        }
-        public void buyinvintory()
-        {
-
-        }
-        
-    }
+    }    
 }
