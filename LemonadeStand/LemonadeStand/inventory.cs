@@ -8,20 +8,14 @@ namespace LemonadeStand
 {
     class inventory
     {
-        public int lemons;
-        public int ice;
-        public int sugar;
+        List<Lemons> lemons = new List<Lemons>();
+        List<Ice> ice = new List<Ice>();
+        List<Sugar> sugar = new List<Sugar>();
 
-        public inventory()
+        public void AddLemons(int lemonsneeded)
         {
-            lemons = 0;
-            ice = 0;
-            sugar = 0;
+           for (int i = 0; i < lemonsneeded; i++) ;
+        }
 
-        }
-        public void buyinventory()
-        {
-            
-        }
     }
 }

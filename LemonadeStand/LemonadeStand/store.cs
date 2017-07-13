@@ -31,9 +31,31 @@ namespace LemonadeStand
 
             if (inventory is "lemons")
             {
-                Console.WriteLine("Each lemon costs $00.10, How many lemons would you like to purchase?");
-                    Console.ReadLine();
+                Console.WriteLine("Each lemon costs $.10, How many lemons would you like to purchase?");
+                Console.ReadLine();
             }
+            else if (inventory is "ice")
+            {
+                Console.WriteLine("Each ice cube costs $.05, How many ice cubes would you like to purchase?");
+                Console.ReadLine();
+            }
+            else if (inventory is "sugar")
+            {
+                Console.WriteLine("Each sugar cube costs $.05, How many sugar cubes would you like to purchase?");
+                Console.ReadLine();
+            }
+            else if (inventory is "done")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("Please enter either (lemons), (ice), (sugar), or (done).");
+                purchaseinventory();
+
+                
+            }
+       
 
         }
 

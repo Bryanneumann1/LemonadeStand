@@ -8,12 +8,12 @@ namespace LemonadeStand
 {
     class player
     {
-        public double money;
+        
 
 
         public player()
         {
-            money = 20.00;
+            
         }
         public void buyinvintory()
         {
