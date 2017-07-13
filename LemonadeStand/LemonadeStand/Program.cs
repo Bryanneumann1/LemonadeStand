@@ -8,11 +8,12 @@ namespace LemonadeStand
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Your Lemonade Stand");
-            rules Start = new rules();
-            Start.DisplayRules();
+            game start = new game();
+            start.playgame();
                 
             Console.ReadKey();
         }

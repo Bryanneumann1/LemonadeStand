@@ -13,7 +13,11 @@ namespace LemonadeStand
 
         public player()
         {
-            money = 10.00;
+            money = 20.00;
+        }
+        public void buyinvintory()
+        {
+
         }
         
     }

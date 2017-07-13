@@ -21,10 +21,7 @@ namespace LemonadeStand
         }
         public void buyinventory()
         {
-            Console.WriteLine("You will need to purchase your invintory\n" +
-                "Make sure you have enough invintory to make it through the day\n" +
-                "If you run out you will lose potential sales\n" +
-                "But if you purchase to much, invintory may spoil");
+            
         }
     }
 }
