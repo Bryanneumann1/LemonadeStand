@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Sugar
+    public class Sugar
     {
+        private double sugarcost = .10;
+        private string lemonname;
+
+        public double GetCost()
+        {
+            return sugarcost;
+        }
     }
 }

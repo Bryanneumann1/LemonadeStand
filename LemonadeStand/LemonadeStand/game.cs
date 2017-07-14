@@ -20,8 +20,8 @@ namespace LemonadeStand
             Console.ReadKey();
             outside.generateWeather();
             Console.ReadKey();
-            purchase.displayinventoryrules();
-            buy.Purchaseinventory();
+            purchase.DisplayInventoryRules();
+            buy.PurchaseInventory();
             
 
         }
