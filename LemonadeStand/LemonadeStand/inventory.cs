@@ -12,9 +12,13 @@ namespace LemonadeStand
         public List<Ice> ice = new List<Ice>();
         public List<Sugar> sugar = new List<Sugar>();
 
-        public void AddLemons(int lemonsneeded)
+        public void AddLemons(int LemonsNeeded)
         {
-           for (int i = 0; i < lemonsneeded; i++) ;
+            for (int i = 0; i < LemonsNeeded; i++)
+            {
+                Lemons lemon = new Lemons();
+                lemon.Add(lemons);
+            }
         }
 
     }
