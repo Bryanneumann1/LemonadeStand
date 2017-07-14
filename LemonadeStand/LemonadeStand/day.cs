@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class day
+    class Day
     {
-        public day()
+        public Day()
         {
 
         }
-        public void daytime()
+        public void DayTime()
         {
 
         }

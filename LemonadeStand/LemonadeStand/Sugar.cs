@@ -9,7 +9,6 @@ namespace LemonadeStand
     public class Sugar
     {
         private double sugarcost = .10;
-        private string lemonname;
 
         public double GetCost()
         {

@@ -8,9 +8,9 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        List<Lemons> lemons = new List<Lemons>();
-        List<Ice> ice = new List<Ice>();
-        List<Sugar> sugar = new List<Sugar>();
+        public List<Lemons> lemons = new List<Lemons>();
+        public List<Ice> ice = new List<Ice>();
+        public List<Sugar> sugar = new List<Sugar>();
 
         public void AddLemons(int lemonsneeded)
         {

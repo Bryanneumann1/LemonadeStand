@@ -9,7 +9,6 @@ namespace LemonadeStand
     public class Ice
     {
         private double IceCost = .05;
-        private string icename;
 
         public double GetCost()
         {

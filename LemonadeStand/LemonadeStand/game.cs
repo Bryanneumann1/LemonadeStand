@@ -8,20 +8,23 @@ namespace LemonadeStand
 {
     class Game
     {
-        Rules Start = new Rules();
+        Rules Start;
         Weather outside = new Weather();
-        Store purchase = new Store();
-        Store buy = new Store();
-
-        
+        public Player player = new Player();
+        Store store;
+        public Game()
+        {
+            Start = new Rules();
+            store = new Store(player);
+        }
         public void Playgame()
         {
             Start.DisplayRules();
             Console.ReadKey();
-            outside.generateWeather();
+            outside.GenerateWeather();
             Console.ReadKey();
-            purchase.DisplayInventoryRules();
-            buy.PurchaseInventory();
+            store.DisplayInventoryRules();
+            store.PurchaseInventory();
             
 
         }

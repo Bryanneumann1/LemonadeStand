@@ -12,7 +12,7 @@ namespace LemonadeStand
         {
 
         }
-        public int generateWeather()
+        public int GenerateWeather()
         {
             Random weather = new Random();
             int number = weather.Next(0, 3);
@@ -32,11 +32,11 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Looks like its windy today, good luck selling lemonade on such a windy day");
             }
-            generateTemp();
+            GenerateTemp();
             return number;
             
         }
-        public int generateTemp()
+        public int GenerateTemp()
         {
             Random tempature = new Random();
             int temp = tempature.Next(70, 99);

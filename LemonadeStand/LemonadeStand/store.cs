@@ -11,12 +11,16 @@ namespace LemonadeStand
         double PurchaseLemons;
         double PurchaseIce;
         double PurchaseSugar;
-
+        Player player;
+        public Store(Player player)
+        {
+            this.player = player;
+        }
         public void DisplayInventoryRules()
         {
             Console.WriteLine("You will need to purchase your inventory\n" +
                 "Make sure you have enough inventory to make it through the day\n" +
-                "If you run out you will lose potential sales\n");
+                "If you run out you may lose potential sales\n");
         }
         public void PurchaseInventory()
         {
@@ -25,69 +29,107 @@ namespace LemonadeStand
             switch (inventory)
             {
                 case "lemons":
-                   NumberOfLemonsNeeded();
+                    int numberOfLemons = NumberOfLemonsNeeded();
+                    Lemons lemons = new Lemons();
+                    bool enoughMoney = player.CheckIfEnoughMoney(numberOfLemons, lemons.GetCost());
+                    if (enoughMoney == true)
+                    {
+                        player.GenerateLemons(numberOfLemons);
+                        //take money from wallet
+                    }
+                    NumberOfLemonsNeeded();
                     break;
                 case "ice":
-                   NumberOfIceNeeded();
+                    int numberOfIce = NumberOfIceNeeded();
+                    Ice ice = new Ice();
+                    bool enoughMoney = player.CheckIfEnoughMoney(numberOfIce, ice.GetCost());
+                    if (enoughMoney == true)
+                    {
+                        player.GenereateIce(numberOfIce);
+                        //take money from wallet
+                    }
+                    else
+                    {
+                        numberOfIce = NumberOfIceNeeded();
+                    }
                     break;
                 case "sugar":
-                   NumberOfSugarNeeded();
+                    int numberOfSugar = NumberOfSugarNeeded();
+                    Sugar sugar = new Sugar();
+                    bool enoughMoney = player.CheckIfEnoughMoney(numberOfSugar, sugar.GetCost());
+                    if (enoughMoney == true)
+                    {
+                        player.GenerateSugar(numberOfSugar);
+                        //take money from wallet
+                    }
+
                     break;
                 case "done":
 
                 default:
-                    Console.WriteLine("please enter (lemons), (ice), or (sugar)? When your done purchasing type (done)");
+                    Console.WriteLine("Please enter (lemons), (ice), or (sugar)? When your done purchasing type (done)");
                     PurchaseInventory();
                     break;
             }
+
         }
         public int NumberOfLemonsNeeded()
         {
             Console.WriteLine("Lemons cost 20 cents each.\n");
             Console.WriteLine("How many lemons would you like to purchase?\n");
+            int lemonsNeeded = 0;
             try
             {
-                int lemonsNeeded = int.Parse(Console.ReadLine());
-                return lemonsNeeded;
+                int.Parse(Console.ReadLine());
             }
             catch (Exception)
             {
                 Console.WriteLine("Please enter the quantity in numerical form.\n");
                 PurchaseInventory();
-                throw;
+
             }
+            return lemonsNeeded;
         }
         public int NumberOfSugarNeeded()
         {
             Console.WriteLine("Sugar costs 10 cents per sugar cube.\n");
             Console.WriteLine("How many sugar cubes would you like to purchase?\n");
+            int sugarneeded = 0;
             try
             {
-                int sugarneeded = int.Parse(Console.ReadLine());
-                return sugarneeded;
+                sugarneeded = int.Parse(Console.ReadLine());
+
             }
             catch (Exception)
             {
                 Console.WriteLine("Please enter the quantity in numerical form.\n");
                 PurchaseInventory();
-                throw;
+
             }
+            return sugarneeded;
         }
         public int NumberOfIceNeeded()
         {
             Console.WriteLine("Ice costs 5 cents per cube.\n");
             Console.WriteLine("How many ice cubes would you like to purchase?\n");
+            int iceneeded = 0;
             try
             {
-                int iceneeded = int.Parse(Console.ReadLine());
-                return iceneeded;
+                iceneeded = int.Parse(Console.ReadLine());
+
             }
-            catch
+            catch (Exception)
             {
                 Console.WriteLine("Please enter the quantity in numerical form.\n");
                 PurchaseInventory();
-                throw;
+
             }
+            return iceneeded;
+        }
+
+        public double NumberOfLemonsPurchased()
+        {
+            return PurchaseLemons;
         }
     }
 }

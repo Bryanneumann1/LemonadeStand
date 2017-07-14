@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class customer
+    class Customer
     {
-        public customer()
+        public Customer()
         {
 
         }
-        public void buylemonade()
+        public void BuyLemonade()
         {
 
         }

@@ -14,7 +14,7 @@ namespace LemonadeStand
             Console.WriteLine("Your Lemonade Stand");
             Game start = new Game();
             start.Playgame();
-                
+            double x = start.player.wallet.money;
             Console.ReadKey();
         }
     }
