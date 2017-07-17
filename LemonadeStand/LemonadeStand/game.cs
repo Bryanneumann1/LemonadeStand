@@ -12,10 +12,13 @@ namespace LemonadeStand
         Weather outside = new Weather();
         public Player player = new Player();
         Store store;
+       
+
         public Game()
         {
             Start = new Rules();
             store = new Store(player);
+
         }
         public void Playgame()
         {
@@ -24,8 +27,9 @@ namespace LemonadeStand
             outside.GenerateWeather();
             Console.ReadKey();
             store.DisplayInventoryRules();
+            player.DisplayInventory();
             store.PurchaseInventory();
-            
+            player.DisplayInventory();
 
         }
 

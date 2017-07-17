@@ -11,7 +11,6 @@ namespace LemonadeStand
         public Wallet wallet = new Wallet();
         public Inventory inventory = new Inventory();
         public Recipe recipe = new Recipe();
-
         public bool CheckIfEnoughMoney(int numberOfItem, double priceOfItem)
         {
             double costOfItems = numberOfItem * priceOfItem;
@@ -25,12 +24,12 @@ namespace LemonadeStand
                 return true;
             }
         }
-        public void GenereateIce(int numberOfItem)
+        public void GenerateIce(int numberOfItem)
         {
             for (int i = 0; i < numberOfItem; i++)
             {
                 Ice ice = new Ice();
-                inventory.ice.Add(ice);
+                inventory.icecubes.Add(ice);
             }
         }
         public void GenerateLemons(int numberOfItem)
@@ -47,8 +46,16 @@ namespace LemonadeStand
             for (int i = 0; i < numberOfItem; i++)
             {
                 Sugar sugar = new Sugar();
-                inventory.sugar.Add(sugar);
+                inventory.sugarcubes.Add(sugar);
             }
         }
+        public void DisplayInventory()
+        {
+            Console.WriteLine("You currently have {0} ice cubes.\n", inventory.icecubes.Count);
+            Console.WriteLine("You currently have {0} sugar cubes.\n", inventory.sugarcubes.Count);
+            Console.WriteLine("You currently have {0} lemons.\n", inventory.lemons.Count);
+            Console.WriteLine("You currently have {0} in your wallet.\n", wallet.money);
+        }
+
     }
 }

@@ -23,7 +23,7 @@ namespace LemonadeStand
                 "Set your price accordingly to the weather\n" +
                 "So be sure to check the weather everyday\n" +
                 "At the end of 7 days you will see your total profit or loss\n" +
-                "You will start out with $10.00 to purchase your invintory\n" +
+                "You will start out with $20.00 to purchase your invintory\n" +
                 "\n" +
                 "Press Enter to start the game\n");
 

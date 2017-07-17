@@ -8,11 +8,11 @@ namespace LemonadeStand
 {
     public class Sugar
     {
-        private double sugarcost = .10;
+        private double sugarcost = .05;
 
-        public double GetCost()
+        public double SugarCost
         {
-            return sugarcost;
-        }
+            get{ return sugarcost; }
+            set{ sugarcost = value; }       }
     }
 }

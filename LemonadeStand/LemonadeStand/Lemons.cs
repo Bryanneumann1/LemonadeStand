@@ -8,11 +8,13 @@ namespace LemonadeStand
 {
     public class Lemons
     {
-        private double lemonCost = .20;
+        private double lemonCost = 00.15;
+    
 
-        public double GetCost()
+        public double LemonCost
         {
-            return lemonCost;
+           get { return lemonCost; }
+           set { lemonCost = value; }
         }
 
     }
