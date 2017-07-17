@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Userinterface
+    class LemonadeStand
     {
+        public LemonadeStand()
+        {
 
+        }
+        public void SellLemonade()
+        {
+
+        }
     }
 }

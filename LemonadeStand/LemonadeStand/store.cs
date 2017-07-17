@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
+   
     public class Store
     {
+       
         public double PurchaseLemons;
         public double PurchaseIce;
         public double PurchaseSugar;
         Player player;
         bool enoughMoney;
+        
 
 
         public Store(Player player)
@@ -79,7 +82,8 @@ namespace LemonadeStand
                 case "done":
 
                 default:
-                    PurchaseInventory();
+                    Menu menu = new Menu();
+                    menu.DisplayMenu();
                     break;
             }
 
