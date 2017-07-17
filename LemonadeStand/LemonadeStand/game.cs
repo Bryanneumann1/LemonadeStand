@@ -28,10 +28,10 @@ namespace LemonadeStand
             Console.ReadKey();
             outside.GenerateWeather();
             menu.DisplayMenu();
-            store.DisplayInventoryRules();
-            player.DisplayInventory();
-            store.PurchaseInventory();
-            player.DisplayInventory();
+            //store.DisplayInventoryRules();
+           // player.DisplayInventory();
+            //store.PurchaseInventory();
+            //player.DisplayInventory();
 
         }
 

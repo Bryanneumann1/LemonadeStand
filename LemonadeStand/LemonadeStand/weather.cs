@@ -40,7 +40,7 @@ namespace LemonadeStand
         {
             Random tempature = new Random();
             int temp = tempature.Next(70, 99);
-            Console.WriteLine("The current tempature for today is " + temp + " degrees\n");
+            Console.WriteLine("The current tempature today is " + temp + " degrees\n");
                
 
             return temp;

@@ -8,10 +8,18 @@ namespace LemonadeStand
 {
     public class Menu
     {
-        static Player player = new Player();
-        Store store = new Store(player);
-        Recipe recipe = new Recipe();
-        LemonadeStand lemonadeStand = new LemonadeStand();
+        static Player player;
+        Store store;
+        Recipe recipe;
+        LemonadeStand lemonadeStand;
+
+        public Menu()
+        {
+            recipe = new Recipe();
+            lemonadeStand = new LemonadeStand();
+            store = new Store(player);
+            player = new Player();
+        }
         public void DisplayMenu()
         {
             Console.WriteLine("Please press (1) for the Main Menu\n" +
@@ -28,7 +36,7 @@ namespace LemonadeStand
                     store.PurchaseInventory();
                     break;
                 case "3":
-                    recipe.SetRecipe();
+                    recipe.ChooseRecipe();
                     break;
                 case "4":
                     lemonadeStand.SellLemonade();
