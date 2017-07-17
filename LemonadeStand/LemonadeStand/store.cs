@@ -39,7 +39,7 @@ namespace LemonadeStand
                     if (enoughMoney == true)
                     {
                         player.GenerateLemons(numberOfLemons);
-                        PurchaseLemons = player.inventory.lemons.Count * lemons.LemonCost;
+                        PurchaseLemons = (numberOfLemons) * lemons.LemonCost;
                         player.wallet.money = player.wallet.money - PurchaseLemons;
                     }
                     player.DisplayInventory();
@@ -52,7 +52,7 @@ namespace LemonadeStand
                     if (enoughMoney == true)
                     {
                         player.GenerateIce(numberOfIce);
-                        PurchaseIce = player.inventory.icecubes.Count * ice.IceCost;
+                        PurchaseIce = (numberOfIce) * ice.IceCost;
                         player.wallet.money = player.wallet.money - PurchaseIce;
 
                     }
@@ -70,7 +70,7 @@ namespace LemonadeStand
                     if (enoughMoney == true)
                     {
                         player.GenerateSugar(numberOfSugar);
-                        PurchaseSugar = player.inventory.sugarcubes.Count() * sugar.SugarCost;
+                        PurchaseSugar = (numberOfSugar) * sugar.SugarCost;
                         player.wallet.money = player.wallet.money - PurchaseSugar;
                     }
                     player.DisplayInventory();

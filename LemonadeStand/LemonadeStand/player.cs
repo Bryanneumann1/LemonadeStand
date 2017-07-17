@@ -54,7 +54,7 @@ namespace LemonadeStand
             Console.WriteLine("You currently have {0} ice cubes.\n", inventory.icecubes.Count);
             Console.WriteLine("You currently have {0} sugar cubes.\n", inventory.sugarcubes.Count);
             Console.WriteLine("You currently have {0} lemons.\n", inventory.lemons.Count);
-            Console.WriteLine("You currently have {0} in your wallet.\n", wallet.money);
+            Console.WriteLine("You currently have ${0} in your wallet.\n", wallet.money);
         }
 
     }

@@ -19,9 +19,8 @@ namespace LemonadeStand
         {
             for (int i = 0; i < LemonsNeeded; i++)
             {
-                Lemons lemon = new Lemons();
-                lemons.Add(lemon);
 
+                lemons.Add(lemon);
             }
             
         }
@@ -29,7 +28,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < SugarNeeded; i++)
             {
-                Sugar sugar = new Sugar();
+
                 sugarcubes.Add(sugar);
 
             }
@@ -40,7 +39,7 @@ namespace LemonadeStand
             for (int i = 0; i < IceNeeded; i++)
             {
 
-                Ice ice = new Ice();
+
                 icecubes.Add(ice);
 
             }
