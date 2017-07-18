@@ -37,13 +37,9 @@ namespace LemonadeStand
         public void AddIce(int IceNeeded)
         {
             for (int i = 0; i < IceNeeded; i++)
-            {
-
-
+            { 
                 icecubes.Add(ice);
-
             }
-
         }
         public void RemoveLemons(Player player)
         {
@@ -53,6 +49,7 @@ namespace LemonadeStand
                 for (int i = 0; i < numberOfLemonsToRemove; i++)
                 {
                     lemons.RemoveAt(0);
+
                 }
             }
             catch (Exception)

@@ -10,6 +10,7 @@ namespace LemonadeStand
     {
         public Customer()
         {
+            double percent = 100;
 
         }
         public void BuyLemonade()

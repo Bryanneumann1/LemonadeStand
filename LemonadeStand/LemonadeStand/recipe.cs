@@ -15,7 +15,7 @@ namespace LemonadeStand
         public int removeLemons;
         public int removeIce;
         public int removeSugar;
-        Player player;
+        
         
         public Recipe()
         {
@@ -23,7 +23,6 @@ namespace LemonadeStand
         }
         public void ChooseRecipe()
         {
-            player.DisplayInventory();
             Console.WriteLine("You will have the option to use the standard recipe or create your own.\n" +
                 "The standard recipe for lemonade is 20 ice cubes, 15 sugar cubes, and 8 lemons\n" +
                 "This recipe makes 10 cups of lemonade.\n" +
@@ -37,6 +36,7 @@ namespace LemonadeStand
                     break;
                 case "2":
                     CreateOwnRecipeLemons();
+
                     CreateOwnRecipeIce();
                     CreateOwnRecipeSugar();
                     break;
@@ -53,7 +53,6 @@ namespace LemonadeStand
             {
                 int numberOfPitchers = int.Parse(Console.ReadLine());
                 return this.numberOfPitchers = numberOfPitchers;
-                
             }
             catch (Exception)
             {
@@ -61,7 +60,6 @@ namespace LemonadeStand
                 ChooseRecipe();
                 throw;
             }
-            
         }
 
         public int CreateOwnRecipeLemons()
@@ -78,7 +76,6 @@ namespace LemonadeStand
                 CreateOwnRecipeLemons();
                 throw;
             }
-  
         }
         public int CreateOwnRecipeIce()
         {
@@ -94,8 +91,6 @@ namespace LemonadeStand
                 CreateOwnRecipeIce();
                 throw;
             }
-
-
         }
         public int CreateOwnRecipeSugar()
         {
