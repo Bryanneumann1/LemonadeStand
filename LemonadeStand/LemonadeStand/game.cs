@@ -12,6 +12,7 @@ namespace LemonadeStand
         Weather outside = new Weather();
         public Player player = new Player();
         Store buy;
+        Random random;
 
 
 
@@ -19,7 +20,7 @@ namespace LemonadeStand
         {
             Start = new Rules();
             buy = new Store(player);
-
+            random = new Random();
 
 
         }
@@ -27,7 +28,7 @@ namespace LemonadeStand
         {
             Start.DisplayRules();
             Console.ReadKey();
-            outside.GenerateWeather();
+            outside.GenerateWeather(random);
             Console.ReadKey();
             buy.DisplayInventoryRules();
             buy.PurchaseInventory();

@@ -20,7 +20,7 @@ namespace LemonadeStand
             for (int i = 0; i < LemonsNeeded; i++)
             {
 
-                lemons.Add(lemon);
+                lemons.Add(new Lemons());
             }
             
         }
@@ -90,6 +90,5 @@ namespace LemonadeStand
                 player.recipe.ChooseRecipe();
             }
         }
-
     }
 }

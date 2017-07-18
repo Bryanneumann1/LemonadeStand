@@ -38,56 +38,19 @@ namespace LemonadeStand
             switch (inventory)
             {
                 case "lemons":
-                    int numberOfLemons = NumberOfLemonsNeeded();
-                    Lemons lemons = new Lemons();
-
-                    enoughMoney = player.CheckIfEnoughMoney(numberOfLemons, lemons.LemonCost);
-                    if (enoughMoney == true)
-                    {
-                        player.GenerateLemons(numberOfLemons);
-                        PurchaseLemons = (numberOfLemons) * lemons.LemonCost;
-                        player.wallet.money = player.wallet.money - PurchaseLemons;
-                    }
-                    player.DisplayInventory();
-                    PurchaseInventory();
+                    BuyLemons();
                     break;
                 case "ice":
-                    int numberOfIce = NumberOfIceNeeded();
-                    Ice ice = new Ice();
-                    enoughMoney = player.CheckIfEnoughMoney(numberOfIce, ice.IceCost);
-                    if (enoughMoney == true)
-                    {
-                        player.GenerateIce(numberOfIce);
-                        PurchaseIce = (numberOfIce) * ice.IceCost;
-                        player.wallet.money = player.wallet.money - PurchaseIce;
-
-                    }
-                    else
-                    {
-                        numberOfIce = NumberOfIceNeeded();
-                    }
-                    player.DisplayInventory();
-                    PurchaseInventory();
+                    BuyIce();
                     break;
                 case "sugar":
-                    int numberOfSugar = NumberOfSugarNeeded();
-                    Sugar sugar = new Sugar();
-                    enoughMoney = player.CheckIfEnoughMoney(numberOfSugar, sugar.SugarCost);
-                    if (enoughMoney == true)
-                    {
-                        player.GenerateSugar(numberOfSugar);
-                        PurchaseSugar = (numberOfSugar) * sugar.SugarCost;
-                        player.wallet.money = player.wallet.money - PurchaseSugar;
-                    }
-                    player.DisplayInventory();
-                    PurchaseInventory();
+                    BuySugar();
                     break;
                 case "done":
                     Recipe recipe = new Recipe();
                     recipe.ChooseRecipe();
                     break;
                 default:
-
                     break;
             }
 
@@ -146,6 +109,53 @@ namespace LemonadeStand
             }
             return iceneeded;
         }
+        public void BuyLemons()
+        {
+            int numberOfLemons = NumberOfLemonsNeeded();
+                    Lemons lemons = new Lemons();
 
+                    enoughMoney = player.CheckIfEnoughMoney(numberOfLemons, lemons.LemonCost);
+                    if (enoughMoney == true)
+                    {
+                        player.GenerateLemons(numberOfLemons);
+                        PurchaseLemons = (numberOfLemons) * lemons.LemonCost;
+                        player.wallet.money = player.wallet.money - PurchaseLemons;
+                    }
+                    player.DisplayInventory();
+                    PurchaseInventory();
+        }
+        public void BuyIce()
+        {
+            int numberOfIce = NumberOfIceNeeded();
+            Ice ice = new Ice();
+            enoughMoney = player.CheckIfEnoughMoney(numberOfIce, ice.IceCost);
+            if (enoughMoney == true)
+            {
+                player.GenerateIce(numberOfIce);
+                PurchaseIce = (numberOfIce) * ice.IceCost;
+                player.wallet.money = player.wallet.money - PurchaseIce;
+
+            }
+            else
+            {
+                numberOfIce = NumberOfIceNeeded();
+            }
+            player.DisplayInventory();
+            PurchaseInventory();
+        }
+        public void BuySugar()
+        {
+            int numberOfSugar = NumberOfSugarNeeded();
+            Sugar sugar = new Sugar();
+            enoughMoney = player.CheckIfEnoughMoney(numberOfSugar, sugar.SugarCost);
+            if (enoughMoney == true)
+            {
+                player.GenerateSugar(numberOfSugar);
+                PurchaseSugar = (numberOfSugar) * sugar.SugarCost;
+                player.wallet.money = player.wallet.money - PurchaseSugar;
+            }
+            player.DisplayInventory();
+            PurchaseInventory();
+        }
     }
 }

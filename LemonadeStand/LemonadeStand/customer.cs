@@ -8,14 +8,26 @@ namespace LemonadeStand
 {
     class Customer
     {
+        int thirst;
+        double customerCash;
+
         public Customer()
         {
-            double percent = 100;
-
+            thirst = 0;
+            customerCash = 0;
         }
-        public void BuyLemonade()
+        public int GetThirst(Random random)
         {
-
+            int thirstiness = 0;
+            thirstiness = random.Next(0, 4);
+            return thirstiness;
+        }
+        public double GetCustomerCash(Random random)
+        {
+            double cash = 0;
+            cash = random.Next(1, 15);
+            return cash * .10;
         }
     }
 }
+

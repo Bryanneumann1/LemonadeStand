@@ -15,8 +15,7 @@ namespace LemonadeStand
         public int removeLemons;
         public int removeIce;
         public int removeSugar;
-        
-        
+
         public Recipe()
         {
 
