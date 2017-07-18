@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class LemonadeStand
+    public class LemonadeStand
     {
         public LemonadeStand()
         {
@@ -15,6 +15,11 @@ namespace LemonadeStand
         public void SellLemonade()
         {
             Console.WriteLine();
+        }
+        public bool DisplayDayResults()
+        {
+            //print results
+            return false;
         }
     }
 }

@@ -45,6 +45,54 @@ namespace LemonadeStand
             }
 
         }
+        public void RemoveLemons(Player player)
+        {
+            try
+            {
+                int numberOfLemonsToRemove = player.recipe.removeLemons;
+                for (int i = 0; i < numberOfLemonsToRemove; i++)
+                {
+                    lemons.RemoveAt(0);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You may need to modify your recipe" );
+                player.recipe.ChooseRecipe();
+            }
+        }
+        public void RemoveIce(Player player)
+        {
+            try
+            {
+                int numberOfIceToRemove = player.recipe.removeIce;
+                for (int i = 0; i < numberOfIceToRemove; i++)
+                {
+                    icecubes.RemoveAt(0);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You may need to modify your recipe");
+                player.recipe.ChooseRecipe();
+            }
+        }
+        public void RemoveSugar(Player player)
+        {
+            try
+            {
+                int numberOfSugarToRemove = player.recipe.removeSugar;
+                for (int i = 0; i < numberOfSugarToRemove; i++)
+                {
+                    sugarcubes.RemoveAt(0);
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("You may need to modify your recipe");
+                player.recipe.ChooseRecipe();
+            }
+        }
 
     }
 }

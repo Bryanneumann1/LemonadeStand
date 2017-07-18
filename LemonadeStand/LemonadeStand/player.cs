@@ -11,6 +11,8 @@ namespace LemonadeStand
         public Wallet wallet = new Wallet();
         public Inventory inventory = new Inventory();
         public Recipe recipe = new Recipe();
+        public LemonadeStand lemonadeStand = new LemonadeStand();
+        
         public bool CheckIfEnoughMoney(int numberOfItem, double priceOfItem)
         {
             double costOfItems = numberOfItem * priceOfItem;

@@ -11,15 +11,16 @@ namespace LemonadeStand
         Rules Start;
         Weather outside = new Weather();
         public Player player = new Player();
-        Store store;
-        Menu menu;
-       
+        Store buy;
+
+
 
         public Game()
         {
             Start = new Rules();
-            store = new Store(player);
-            menu = new Menu();
+            buy = new Store(player);
+
+
 
         }
         public void Playgame()
@@ -27,12 +28,21 @@ namespace LemonadeStand
             Start.DisplayRules();
             Console.ReadKey();
             outside.GenerateWeather();
-            menu.DisplayMenu();
+            Console.ReadKey();
+            buy.DisplayInventoryRules();
+            buy.PurchaseInventory();
+
+           
+            
             //store.DisplayInventoryRules();
            // player.DisplayInventory();
             //store.PurchaseInventory();
             //player.DisplayInventory();
 
+            for(int i = 0; i < 7; i++)
+            {
+
+            }
         }
 
     }

@@ -15,12 +15,15 @@ namespace LemonadeStand
         public double PurchaseSugar;
         Player player;
         bool enoughMoney;
-        
+
+
 
 
         public Store(Player player)
         {
             this.player = player;
+            
+
         }
         public void DisplayInventoryRules()
         {
@@ -80,10 +83,11 @@ namespace LemonadeStand
                     PurchaseInventory();
                     break;
                 case "done":
-
+                    Recipe recipe = new Recipe();
+                    recipe.ChooseRecipe();
+                    break;
                 default:
-                    Menu menu = new Menu();
-                    menu.DisplayMenu();
+
                     break;
             }
 
