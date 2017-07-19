@@ -8,9 +8,12 @@ namespace LemonadeStand
 {
     class Weather
     {
+        public int temp;
+       
         public Weather()
         {
-
+           
+        
         }
         public int GenerateWeather(Random random)
         {
