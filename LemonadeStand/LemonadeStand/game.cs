@@ -35,16 +35,17 @@ namespace LemonadeStand
             weather.GenerateWeather(random);
             weather.GenerateTemp(random);
             store.DisplayInventoryRules();
-            store.PurchaseInventory();
-            recipe.ChooseRecipe();
-            day.MakeCustomer(weather, random);
-            day.StartDay();
-            day.CustomerTransaction(inventory, player);
 
-            for(int i = 0; i < 7; i++)
+
+            for (int i = 0; i < 7; i++)
             {
-
+                store.PurchaseInventory();
+                recipe.ChooseRecipe();
+                day.MakeCustomer(weather, random);
+                day.StartDay();
+                day.CustomerTransaction(inventory, player);
             }
+            Environment.Exit(0);
         }
 
     }

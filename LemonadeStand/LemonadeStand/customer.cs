@@ -11,7 +11,7 @@ namespace LemonadeStand
         public int thirst;
         public double customerCash;
 
-        public Customer()
+        public Customer(int thirst,double customerCash)
         {
             this.thirst = 0;
             this.customerCash = 0;

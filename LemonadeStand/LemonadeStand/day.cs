@@ -23,20 +23,25 @@ namespace LemonadeStand
         
             dayNumber = 1;
             pitcher = 10;
-            customer = new Customer();
+            customer = new Customer(0,0);
+        }
+        public void DayCounter()
+        {
+            dayNumber += 1;
         }
         public void MakeCustomer(Weather weather, Random random)
         {
             double people = weather.temp * .50;
+             
             for (int i = 0; i < people; i++)
-            {
+            
 
+            { 
                 customer.thirst = customer.GetThirst(random);
                 customer.customerCash = customer.GetCustomerCash(random);
-                CustomerList.Add(new Customer());
+                CustomerList.Add(new Customer(customer.thirst,customer.customerCash));
+               Console.WriteLine("Test for thirst and cash"+customer.thirst + customer.customerCash);
             }
-                Console.WriteLine("are you working"+CustomerList.Count);
-            
         }
         public void StartDay()
         {
@@ -55,6 +60,7 @@ namespace LemonadeStand
         }
         public void CustomerTransaction(Inventory inventory, Player player)
         {
+
             int customerCapabilityToBuy = 0;
 
             foreach (Customer customer in CustomerList)
