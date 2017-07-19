@@ -47,7 +47,6 @@
     <Compile Include="Game.cs" />
     <Compile Include="Ice.cs" />
     <Compile Include="Inventory.cs" />
-    <Compile Include="LemonadeStand.cs" />
     <Compile Include="Lemons.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

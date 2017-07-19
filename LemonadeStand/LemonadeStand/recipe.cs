@@ -15,9 +15,11 @@ namespace LemonadeStand
         public int removeLemons;
         public int removeIce;
         public int removeSugar;
+        Inventory inventory;
 
         public Recipe()
         {
+            inventory = new Inventory();
 
         }
         public void ChooseRecipe()
@@ -35,7 +37,6 @@ namespace LemonadeStand
                     break;
                 case "2":
                     CreateOwnRecipeLemons();
-
                     CreateOwnRecipeIce();
                     CreateOwnRecipeSugar();
                     break;
@@ -52,6 +53,8 @@ namespace LemonadeStand
             {
                 int numberOfPitchers = int.Parse(Console.ReadLine());
                 return this.numberOfPitchers = numberOfPitchers;
+               
+
             }
             catch (Exception)
             {
@@ -143,7 +146,7 @@ namespace LemonadeStand
             }
             catch (Exception)
             {
-                Console.WriteLine("Looks like you dont have enough lemons, Lets try again");
+                Console.WriteLine("Looks like you dont have enough sugar, Lets try again");
                 ChooseRecipe();
                 throw;
             }

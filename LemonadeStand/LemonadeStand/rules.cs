@@ -24,7 +24,7 @@ namespace LemonadeStand
                 "So be sure to check the weather everyday\n" +
                 "At the end of 7 days you will see your total profit or loss\n" +
                 "You will start out with $20.00 to purchase your invintory\n");
-                
+            Console.ReadKey();
 
           
         }

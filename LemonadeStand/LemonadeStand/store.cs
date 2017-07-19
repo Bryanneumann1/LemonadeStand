@@ -47,10 +47,9 @@ namespace LemonadeStand
                     BuySugar();
                     break;
                 case "done":
-                    Recipe recipe = new Recipe();
-                    recipe.ChooseRecipe();
                     break;
                 default:
+                    PurchaseInventory();
                     break;
             }
 

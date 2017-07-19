@@ -14,7 +14,22 @@ namespace LemonadeStand
         public Lemons lemon = new Lemons();
         public Ice ice = new Ice();
         public Sugar sugar = new Sugar();
+        int sugarForRecipe = 15;
+        int iceForRecipe = 20;
+        int lemonsForRecipe = 8;
 
+        public Inventory()
+        {
+            this.sugarForRecipe = 0;
+            this.iceForRecipe = 0;
+            this.lemonsForRecipe = 0;
+        }
+        public void UpdateInventory()
+        {
+            sugarForRecipe -= 15;
+            iceForRecipe -= 20;
+            lemonsForRecipe -= 8;
+        }
         public void AddLemons(int LemonsNeeded)
         {
             for (int i = 0; i < LemonsNeeded; i++)
@@ -29,7 +44,7 @@ namespace LemonadeStand
             for (int i = 0; i < SugarNeeded; i++)
             {
 
-                sugarcubes.Add(sugar);
+                sugarcubes.Add(new Sugar());
 
             }
 
@@ -38,7 +53,7 @@ namespace LemonadeStand
         {
             for (int i = 0; i < IceNeeded; i++)
             { 
-                icecubes.Add(ice);
+                icecubes.Add(new Ice());
             }
         }
         public void RemoveLemons(Player player)

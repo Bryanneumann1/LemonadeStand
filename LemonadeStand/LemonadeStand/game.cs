@@ -9,36 +9,37 @@ namespace LemonadeStand
     class Game
     {
         Rules Start;
-        Weather outside = new Weather();
+        Weather weather = new Weather();
         public Player player = new Player();
-        Store buy;
+        Store store;
+        Recipe recipe;
+        Day day;
         Random random;
-
+        Inventory inventory;
 
 
         public Game()
         {
             Start = new Rules();
-            buy = new Store(player);
+            store = new Store(player);
+            recipe = new Recipe();
+            day = new Day();
             random = new Random();
+            inventory = new Inventory();
 
 
         }
         public void Playgame()
         {
             Start.DisplayRules();
-            Console.ReadKey();
-            outside.GenerateWeather(random);
-            Console.ReadKey();
-            buy.DisplayInventoryRules();
-            buy.PurchaseInventory();
-
-           
-            
-            //store.DisplayInventoryRules();
-           // player.DisplayInventory();
-            //store.PurchaseInventory();
-            //player.DisplayInventory();
+            weather.GenerateWeather(random);
+            weather.GenerateTemp(random);
+            store.DisplayInventoryRules();
+            store.PurchaseInventory();
+            recipe.ChooseRecipe();
+            day.MakeCustomer(weather, random);
+            day.StartDay();
+            day.CustomerTransaction(inventory, player);
 
             for(int i = 0; i < 7; i++)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Weather
+    public class Weather
     {
         public int temp;
        
@@ -35,16 +35,15 @@ namespace LemonadeStand
             {
                 Console.WriteLine("Looks like its windy today, good luck selling lemonade on such a windy day");
             }
-            GenerateTemp(random);
             return number;
             
         }
         public int GenerateTemp(Random random)
         {
 
-            int temp = random.Next(70, 99);
+            temp = random.Next(70, 99);
             Console.WriteLine("The current tempature today is " + temp + " degrees\n");
-               
+            Console.ReadKey();
 
             return temp;
         }
